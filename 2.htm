@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>techessence</title>
+	<style>									<!--style to give slides show-->
+	.mySlides{
+	display: none}         <!--display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. --->
+	img{
+	vertical-align: middle;}
+
+	                                    /* Slideshow container */
+	.slideshow-container {
+  	max-width: 1000px;
+  	position: relative;
+  	margin: auto;
+	}
+
+				/* Next & previous buttons */
+	.prev, .next {
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	padding: 16px;
+  	margin-top: -22px;
+  	color: grey;
+  	font-weight: bold;
+  	font-size: 18px;
+  	transition: 0.6s ease;
+  	border-radius: 0 3px 3px 0;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+  	right: 0;
+  	border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+ 	 background-color: rgba(0,0,0,0.8);
+	}
+
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+  	color: #f2f2f2;
+  	font-size: 12px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+  	cursor: pointer;
+  	height: 15px;
+  	width: 15px;
+  	margin: 0 2px;
+  	background-color: #bbb;
+  	border-radius: 50%;
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+  	background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+  	-webkit-animation-name: fade;
+  	-webkit-animation-duration: 1.5s;
+  	animation-name: fade;
+  	animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+	}
+
+	@keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+  	.prev, .next,.text {font-size: 11px}
+	}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<div class="header">
+  <h1> &emsp;&nbsp; TECH<span style="color:white;">ESSENCE</span></h1>
+  <h4>&ensp;&emsp;&ensp;one place for every flavour of <span style="color:white;">
+technology</span></h4>
+</div>
+
+<div class="topnav">
+  <a href="file:///D:/html/2.htm">HOME</A>
+  <a href="#">GADGET REVIEWS</a>
+  <!--<a href="#">LATEST TECH</a> -->
+  <!--<a href="#">JEE MATERIAL</a>-->
+  <a href="algo.htm">ALGORITHMS</a>
+  <!--<a href="#">CSE AT IIT</a>-->
+  <!--<a href="#">COMPETITIVE PROGRAMMING</a>-->
+
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Why One Plus</h2>
+      <h5>Gadget Revies:Mobile Phones, June 25, 2018</h5>
+                                                                 
+
+			 <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="21+.jpg" style="width:70%">
+ <!-- <div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="31+.jpg" style="width:70%">
+ <!--  <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="1+.jpg" style="width:70%">
+  <!-- <div class="text">Caption Three</div>-->
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+                         </script>
+      
+
+
+	<p>Never Settle</p>
+      <p>The company's main goal was to design a smartphone that would balance high-end quality with a lower price than other phones in its class, believing that users would "Never Settle" for the lower-quality devices produced by other companies...<a href="https://en.wikipedia.org/wiki/OnePlus">Read More. Source wiki.</a></p>
+    </div>
+    <div class="card">
+      <h2>Learn Sorting Algorithms</h2>
+      <h5>Competitive Programming, June 25, 2018</h5>
+      <img src="algo.jpg">
+      <p>Learn about designing algorithms.</p>
+      <p>Two of the major approaches for designing algorithms are incremental approach and divide and conquer approach...<a href="algo.htm">Read more</a></p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Hi!</div>
+      <p>Hey! This is Sapna, currently a sophomore of B.Tech in Computer Science and Engineering at Indian Institute of Technology..<a href="#">Read More</a> </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>yet</p></div>
+      <div class="fakeimg"><p>to</p></div>
+      <div class="fakeimg"><p>come</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>At Quora and Facebook</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+<!--<a href="#">GoToTop</a>-->
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>  
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
